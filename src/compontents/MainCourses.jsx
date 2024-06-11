@@ -5,7 +5,7 @@ const MainCourses = ({ children, title, more, handleMoreClick }) => {
   return (
     <div className=" bg-gray-100 rounded-md">
       {title && <h2 className="text-2xl font-bold p-5 mb-3">{title}</h2>}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
         {children}
       </div>
       {more && (
