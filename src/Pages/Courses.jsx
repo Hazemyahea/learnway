@@ -10,10 +10,15 @@ export const Courses = () => {
   const [page, setPage] = useState(1); // State to track page number
   const [courses, setCourses] = useState([]); // State to hold all courses
   const { data, isLoading, error } = useGetCoursesByCategory(id, page);
-
+  const [more, setMore] = useState(true);
   useEffect(() => {
     if (data) {
       setCourses((prevCourses) => [...prevCourses, ...data]);
+    }
+    if (data.length <= 5) {
+      setMore(false);
+    } else {
+      setMore(true);
     }
   }, [data]);
   const handleMoreClick = () => {
