@@ -9,10 +9,10 @@ export const Episode = ({ episode }) => {
 
   return (
     <li
-      className=" cursor-pointer p-4 text-center transition-all duration-300  bg-white hover:bg-gray-300"
+      className=" cursor-pointer p-4  transition-all duration-300 text-wrap  bg-white hover:bg-gray-300"
       onClick={() => setCourse(episode)}
     >
-      {episode.title.slice(0, 50)}
+      {episode.title.slice(0, 100)}
     </li>
   );
 };

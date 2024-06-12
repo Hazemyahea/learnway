@@ -15,7 +15,7 @@ const Episodes = () => {
   }
   return (
     <div>
-      <ul className="flex flex-col gap-4 bg-gray-200 p-5">
+      <ul className="flex flex-col gap-4 bg-gray-200 p-5 ">
         {theCourse[0]?.video.map((episode) => (
           <Episode key={episode.id} episode={episode} />
         ))}

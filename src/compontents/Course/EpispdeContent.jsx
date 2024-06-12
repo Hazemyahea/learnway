@@ -8,7 +8,7 @@ export const EpispdeContent = () => {
 
   const { name, url, info } = course;
   return (
-    <div className="flex-1 order-1">
+    <div className="order-1  lg:w-4/5">
       <Video video={url} />
       <EpisodeText title={name} description={info} />
     </div>

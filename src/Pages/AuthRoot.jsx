@@ -14,7 +14,7 @@ const AuthRoot = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <MainCategories />
-      <MainCourses title="اشهر الكورسات">
+      <MainCourses title="اشهر الكورسات" main={true}>
         {isLoading ? (
           <div>Loading...</div>
         ) : (
