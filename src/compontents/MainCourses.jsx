@@ -8,7 +8,7 @@ const MainCourses = ({ children, title, more, handleMoreClick }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
         {children}
       </div>
-      {more && (
+      {more ? (
         <div className="flex justify-center items-center">
           <button
             className="text-lg font-bold text-white bg-green-600 p-2 rounded-md mb-5 text-center"
@@ -17,6 +17,10 @@ const MainCourses = ({ children, title, more, handleMoreClick }) => {
           >
             المزيد من الكورسات
           </button>
+        </div>
+      ) : (
+        <div className="flex justify-center items-center p-5 text-red-700">
+          <p className=" text-xl">لايوجد كورسات أخري</p>
         </div>
       )}
     </div>

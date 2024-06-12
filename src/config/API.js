@@ -103,7 +103,7 @@ export async function getAllCategories() {
 }
 
 export async function getCoursesByCategory(category, page = 1) {
-  const limit = 5;
+  const limit = 4;
   const offset = (page - 1) * limit;
   let { data: courses, error } = await supabase
     .from("courses")

@@ -15,7 +15,7 @@ export const Courses = () => {
     if (data) {
       setCourses((prevCourses) => [...prevCourses, ...data]);
     }
-    if (data.length <= 5) {
+    if (data?.length == 0) {
       setMore(false);
     } else {
       setMore(true);
@@ -29,7 +29,7 @@ export const Courses = () => {
     <div>
       {error && <h1>{error.message}</h1>}
       <MainCategories setPage={setPage} fnWork={true} setCourses={setCourses} />
-      <MainCourses more={true} handleMoreClick={handleMoreClick}>
+      <MainCourses more={more} handleMoreClick={handleMoreClick}>
         {isLoading ? (
           <h1>Loading...</h1>
         ) : (
