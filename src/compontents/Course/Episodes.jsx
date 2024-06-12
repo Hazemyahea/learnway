@@ -14,8 +14,8 @@ const Episodes = () => {
     return <h1>{error}</h1>;
   }
   return (
-    <div>
-      <ul className="flex flex-col gap-4 bg-gray-200 p-5 ">
+    <div className="max-h-96 overflow-y-auto bg-gray-200 p-5">
+      <ul className="flex flex-col gap-4">
         {theCourse[0]?.video.map((episode) => (
           <Episode key={episode.id} episode={episode} />
         ))}
